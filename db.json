@@ -1,5 +1,6 @@
 {
-  "filmes": [{
+  "filmes": [
+    {
       "id": 1,
       "titulo": "MIB: Homens de Preto",
       "urlFoto": "https://m.media-amazon.com/images/M/MV5BOTlhYTVkMDktYzIyNC00NzlkLTlmN2ItOGEyMWQ4OTA2NDdmXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
@@ -88,6 +89,36 @@
       "nota": 7.5,
       "urlIMDb": "https://www.imdb.com/title/tt6146586/",
       "genero": "Açao"
+    },
+    {
+      "titulo": " Paatal Lok",
+      "urlFoto": "https://m.media-amazon.com/images/M/MV5BMTE5NWUyMmYtMWE1My00ZDhiLWExZjEtMGJjYTA0OGYwZjIwXkEyXkFqcGdeQXVyODQ5NDUwMDk@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-05-21T03:00:00.000Z",
+      "descricao": "A down and out cop lands the case of a lifetime when four suspects are nabbed in the assassination attempt of a journalist. The pursuit of it leads him to 'Paatal Lok', and to shocking discoveries in the past of the four suspects.",
+      "nota": 7.6,
+      "urlIMDB": "https://www.imdb.com/title/tt9680440/?ref_=hm_fanfav_tt_1_pd_fp1",
+      "select": "Ação",
+      "id": 10
+    },
+    {
+      "titulo": "Betaal",
+      "urlFoto": "https://m.media-amazon.com/images/M/MV5BZDQ4ZDdkZWUtMWVhNi00MTRjLThhZTUtZjQ0YzdkZGEzMjRhXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UY268_CR4,0,182,268_AL_.jpg",
+      "dtLancamento": "2020-05-21T03:00:00.000Z",
+      "descricao": "A remote village becomes the arena of a breathless battle when an undead East India Company officer and his battalion of zombie redcoats attack a squad of modern-day soldiers.",
+      "nota": 6,
+      "urlIMDB": "https://www.imdb.com/title/tt10651790/?ref_=india_t_up",
+      "select": "Terror",
+      "id": 11
+    },
+    {
+      "titulo": "Tenet",
+      "urlFoto": "https://m.media-amazon.com/images/M/MV5BNmMwYzFlNTEtYTc0NC00NGY4LTgzNzItZGFiYTViY2QzNzU1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+      "dtLancamento": "2020-07-16T03:00:00.000Z",
+      "descricao": "Armed with only one word -- Tenet -- and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+      "nota": 7,
+      "urlIMDB": "https://www.imdb.com/title/tt6723592/?ref_=hm_hp_cap_pri_1",
+      "select": "Ação",
+      "id": 12
     }
   ]
 }

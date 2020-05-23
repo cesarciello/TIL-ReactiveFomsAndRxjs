@@ -1,8 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ValidarCamposService } from "src/app/shared/components/campos/validar-campos.service";
-import { Filme } from 'src/app/shared/models/filme';
-import { FilmesService } from 'src/app/core/filmes.service';
+import { Filme } from "src/app/shared/models/filme";
+import { FilmesService } from "src/app/core/filmes.service";
+import { MatDialog } from "@angular/material/dialog";
+import { AlertaComponent } from "src/app/shared/components/alerta/alerta.component";
+import { Router } from "@angular/router";
 
 @Component({
     selector: "dio-cadastro-filmes",
@@ -36,9 +39,11 @@ export class CadastroFilmesComponent implements OnInit {
     ];
 
     constructor(
-        public validacao: ValidarCamposService,
+        private router: Router,
         private fb: FormBuilder,
-        public filmeService: FilmesService
+        public dialog: MatDialog,
+        public filmeService: FilmesService,
+        public validacao: ValidarCamposService
     ) {}
 
     get f() {
@@ -80,9 +85,35 @@ export class CadastroFilmesComponent implements OnInit {
 
     private salvar(filme: Filme): void {
         this.filmeService.salvar(filme).subscribe(
-            data =>  alert("SUCESSO!"),
-            error =>  alert("ERROR!")
+            (data) => {
+                const config = {
+                    data: {
+                        btnSucces: "Ir para listagem",
+                        btnCancel: "Cadastrar novo filme",
+                        canViewCancelar: true,
+                    },
+                };
+                const dialogRef = this.dialog.open(AlertaComponent, config);
+                dialogRef.afterClosed().subscribe((data) => {
+                    if (data) {
+                        this.router.navigateByUrl("/");
+                    } else {
+                        this.cadastro.reset();
+                    }
+                });
+            },
+            (error) => {
+                const config = {
+                    data: {
+                        titulo: "Erro ao salvar o registro.",
+                        descricao:
+                            "Não conseguimos salvar seu registro, favor tentar novamente mais tarde.",
+                        btnSucces: "Fechar",
+                        btnColor: "warn",
+                    },
+                };
+                this.dialog.open(AlertaComponent, config);
+            }
         );
     }
-
 }

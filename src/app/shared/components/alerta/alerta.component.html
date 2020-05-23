@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{ valuesModal.titulo }}</h1>
+<div mat-dialog-content>
+    <p>{{ valuesModal.descricao }}</p>
+</div>
+<div mat-dialog-actions>
+    <button [color]="valuesModal.btnColor" mat-raised-button [mat-dialog-close]="true"
+        cdkFocusInitial>{{ valuesModal.btnSucces }}</button>
+    <button color="warn" mat-raised-button [mat-dialog-close]="false"
+        *ngIf="valuesModal.canViewCancelar">{{ valuesModal.btnCancel }}</button>
+</div>
